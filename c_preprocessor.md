@@ -14,7 +14,7 @@ title: C Preprocessor
 
     #define FOO
     #define FOO "hello"
-
+    
     #undef FOO
 
 ### If
@@ -42,6 +42,11 @@ title: C Preprocessor
 
     #define DST(name) name##_s name##_t
     DST(object);   #=> "object_s object_t;"
+
+### Token stringify
+
+    #define varName(var) #name
+    varName(var1);   #=> "var1";
 
 ### file and line
 
